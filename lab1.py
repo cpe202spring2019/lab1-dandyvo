@@ -4,7 +4,7 @@
 # Instructor:   Hatalsky
 # Term:         Spring 2019
 
-def max_list_iter(int_list):
+def max_list_iter(int_list):        # finds the max value of a list using iteration
     if int_list == None:
         raise ValueError
     elif len(int_list) == 0:  
@@ -17,7 +17,7 @@ def max_list_iter(int_list):
     return max_number   
 
 
-def reverse_rec(int_list):
+def reverse_rec(int_list):          # reverses a list using recursion
     if int_list == None:
         raise ValueError
     elif int_list == []:
@@ -25,7 +25,7 @@ def reverse_rec(int_list):
     return reverse_rec(int_list[1:]) + [int_list[0]] 
 
 
-def bin_search(target, low, high, int_list):  # must use recursion
+def bin_search(target, low, high, int_list):  # binary search of a value in a list using recursion
     if int_list == None:
         raise ValueError
     if low == high and int_list[low] != target:
