@@ -1,3 +1,8 @@
+# Name:         Dandy Vo
+# Course:       CPE 202
+# Assignment:   Lab 1
+# Instructor:   Hatalsky
+# Term:         Spring 2019
 
 def max_list_iter(int_list):
     if int_list == None:
@@ -18,6 +23,7 @@ def reverse_rec(int_list):
     elif int_list == []:
         return []
     return reverse_rec(int_list[1:]) + [int_list[0]] 
+
 
 def bin_search(target, low, high, int_list):  # must use recursion
     if int_list == None:

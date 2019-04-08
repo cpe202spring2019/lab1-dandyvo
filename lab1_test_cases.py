@@ -27,6 +27,9 @@ class TestLab1(unittest.TestCase):
     def test_reverse_rec(self):
         self.assertEqual(reverse_rec([1, 2, 3]), [3, 2, 1])
         self.assertEqual(reverse_rec([3, 1, 2, 0]), [0, 2, 1, 3])
+        self.assertEqual(reverse_rec([1, 1, 1]), [1, 1, 1])
+        self.assertEqual(reverse_rec([2, 2, 1]), [1, 2, 2])
+        self.assertEqual(reverse_rec([1, 2, 2]), [2, 2, 1])
         self.assertEqual(reverse_rec([]), [])
         with self.assertRaises(ValueError):
             reverse_rec(None)
