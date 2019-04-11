@@ -28,7 +28,7 @@ def reverse_rec(int_list):          # reverses a list using recursion
 def bin_search(target, low, high, int_list):  # binary search of a value in a list using recursion
     if int_list == None:
         raise ValueError
-    if low > high or (low == high and int_list[low] != target) or (low > len(int_list) or high > len(int_list)):
+    if low > high or (low > len(int_list) or high > len(int_list)) or (low == high and int_list[low] != target):
         return None
     midpoint = int((low + high) / 2)
     if int_list[midpoint] == target:
