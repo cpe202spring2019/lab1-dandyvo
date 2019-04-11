@@ -42,6 +42,8 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(bin_search(5, 1, 4, list_val), None)   # val not in low-high
         self.assertEqual(bin_search(9, 0, 8, list_val), 7)  # upper half
         self.assertEqual(bin_search(3, 0, 8, list_val), 3)  # lower half
+        self.assertEqual(bin_search(10, 0, 6, list_val), None)
+        self.assertEqual(bin_search(10, 6, 0, list_val), None)  # high is less than low
         with self.assertRaises(ValueError):
             bin_search(5, 0, 4, None)
 
